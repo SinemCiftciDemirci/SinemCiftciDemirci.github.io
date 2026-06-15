@@ -16,7 +16,7 @@
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
-  --bs-orange: #A5B68D;
+  --bs-orange: #7c3aed;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
   --bs-teal: #20c997;
@@ -34,7 +34,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #A5B68D;
+  --bs-primary: #7c3aed;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #A5B68D;
-  --bs-link-hover-color: #A5B68D;
+  --bs-link-color: #7c3aed;
+  --bs-link-hover-color: #7c3aed;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -10971,8 +10971,8 @@ section.resume-section .resume-section-content {
   }
 }
 .custom-sidebar {
-    background-color: #A5B68D !important; /* Senin seçtiğin renk paletinden bir yeşil tonu */
+    background-color: #0a0a0a !important;
 }
 .custom-accent {
-    color: #A5B68D !important; /* pastel yeşil veya dilediğin vurgu rengi */
+    color: #7c3aed !important;
 }
