@@ -14,22 +14,6 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <script>
-        function showTab(project, num) {
-            var i = 1;
-            while (document.getElementById(project + '-' + i)) {
-                document.getElementById(project + '-' + i).classList.remove('active');
-                i++;
-            }
-            document.getElementById(project + '-' + num).classList.add('active');
-
-            var btns = document.querySelectorAll('.' + project + '-btn');
-            for (var j = 0; j < btns.length; j++) {
-                btns[j].classList.remove('active');
-            }
-            document.getElementById(project + '-btn-' + num).classList.add('active');
-        }
-        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -192,12 +176,12 @@
                         <p><strong>FersmithAI: Personalized AI/ML Learning Platform</strong> <span class="badge bg-success" style="font-size:0.7rem;">In Progress</span><br>
                         A full-stack SaaS platform delivering personalized AI/ML learning roadmaps for technical professionals. Built solo with Next.js 14, Supabase (PostgreSQL + Auth), and Tailwind CSS. Features a 140-question adaptive assessment engine, dynamic skill graph with real-time progress tracking, and Google OAuth. Currently live as a waitlist — subscription model coming soon.
                         </p>
-                        <div class="project-tabs mb-2">
-                            <button id="fersmith-btn-1" class="tab-btn fersmith-btn active" onclick="showTab(‘fersmith’, 1)">Screen 1</button>
-                            <button id="fersmith-btn-2" class="tab-btn fersmith-btn" onclick="showTab(‘fersmith’, 2)">Screen 2</button>
-                            <button id="fersmith-btn-3" class="tab-btn fersmith-btn" onclick="showTab(‘fersmith’, 3)">Screen 3</button>
-                            <button id="fersmith-btn-4" class="tab-btn fersmith-btn" onclick="showTab(‘fersmith’, 4)">Screen 4</button>
-                            <button id="fersmith-btn-5" class="tab-btn fersmith-btn" onclick="showTab(‘fersmith’, 5)">Screen 5</button>
+                        <div class="project-tabs mb-2" data-project="fersmith">
+                            <button class="tab-btn active" data-tab="1">Screen 1</button>
+                            <button class="tab-btn" data-tab="2">Screen 2</button>
+                            <button class="tab-btn" data-tab="3">Screen 3</button>
+                            <button class="tab-btn" data-tab="4">Screen 4</button>
+                            <button class="tab-btn" data-tab="5">Screen 5</button>
                         </div>
                         <div class="project-img-wrapper">
                             <img id="fersmith-1" src="assets/img/fersmithai/1.PNG" class="project-tab-img active" alt="FersmithAI Screen 1">
@@ -216,10 +200,10 @@
                         <p><strong>SkyAnalyst-AI: Cabin Operations Intelligence Framework</strong><br>
                         A modular NLP framework that transforms unstructured flight cabin reports into structured operational insights using RAG and abstractive summarization. Built on ChromaDB vector storage and all-MiniLM-L6-v2 embeddings for semantic retrieval across 2,500+ synthetic incident reports — enabling meaning-based search that goes beyond keyword matching. Summarization is powered by DistilBART-CNN, delivering 4x faster inference than standard BART with negligible quality loss. Includes an exploratory analytics dashboard with sentiment intensity scoring and statistical visualizations across 5 incident categories and 22 flight routes.
                         </p>
-                        <div class="project-tabs mb-2">
-                            <button id="skyanalyst-btn-1" class="tab-btn skyanalyst-btn active" onclick="showTab(‘skyanalyst’, 1)">Screen 1</button>
-                            <button id="skyanalyst-btn-2" class="tab-btn skyanalyst-btn" onclick="showTab(‘skyanalyst’, 2)">Screen 2</button>
-                            <button id="skyanalyst-btn-3" class="tab-btn skyanalyst-btn" onclick="showTab(‘skyanalyst’, 3)">Screen 3</button>
+                        <div class="project-tabs mb-2" data-project="skyanalyst">
+                            <button class="tab-btn active" data-tab="1">Screen 1</button>
+                            <button class="tab-btn" data-tab="2">Screen 2</button>
+                            <button class="tab-btn" data-tab="3">Screen 3</button>
                         </div>
                         <div class="project-img-wrapper">
                             <img id="skyanalyst-1" src="assets/img/skyanalystai/1.PNG" class="project-tab-img active" alt="SkyAnalyst Screen 1">
@@ -236,10 +220,10 @@
                         <p><strong>Children’s Tale Summarizer: NLP Pipeline & Flask Application</strong><br>
                         Fine-tuned and evaluated multiple transformer models (BERT, T5, mT5) for Turkish children’s literature. Integrated Flask API and Stable Diffusion to generate visual illustrations. 90% of users found the visuals well-aligned with the story content.
                         </p>
-                        <div class="project-tabs mb-2">
-                            <button id="tales-btn-1" class="tab-btn tales-btn active" onclick="showTab(‘tales’, 1)">Screen 1</button>
-                            <button id="tales-btn-2" class="tab-btn tales-btn" onclick="showTab(‘tales’, 2)">Screen 2</button>
-                            <button id="tales-btn-3" class="tab-btn tales-btn" onclick="showTab(‘tales’, 3)">Screen 3</button>
+                        <div class="project-tabs mb-2" data-project="tales">
+                            <button class="tab-btn active" data-tab="1">Screen 1</button>
+                            <button class="tab-btn" data-tab="2">Screen 2</button>
+                            <button class="tab-btn" data-tab="3">Screen 3</button>
                         </div>
                         <div class="project-img-wrapper">
                             <img id="tales-1" src="assets/img/childrentalesummarizer/1.jpg" class="project-tab-img active" alt="Tales Screen 1">
@@ -292,5 +276,21 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.project-tabs').forEach(function(tabGroup) {
+                tabGroup.querySelectorAll('.tab-btn').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        var project = tabGroup.getAttribute('data-project');
+                        var num = btn.getAttribute('data-tab');
+                        tabGroup.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+                        btn.classList.add('active');
+                        document.querySelectorAll('[id^="' + project + '-"]').forEach(function(img) { img.classList.remove('active'); });
+                        document.getElementById(project + '-' + num).classList.add('active');
+                    });
+                });
+            });
+        });
+        </script>
     </body>
 </html>
