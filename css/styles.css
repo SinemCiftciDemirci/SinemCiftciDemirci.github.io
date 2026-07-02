@@ -16,7 +16,7 @@
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
-  --bs-orange: #7c3aed;
+  --bs-orange: #0F766E;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
   --bs-teal: #20c997;
@@ -34,7 +34,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #7c3aed;
+  --bs-primary: #0F766E;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 124, 58, 237;
+  --bs-primary-rgb: 15, 118, 110;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -73,8 +73,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #7c3aed;
-  --bs-link-hover-color: #7c3aed;
+  --bs-link-color: #0F766E;
+  --bs-link-hover-color: #0F766E;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -10928,7 +10928,7 @@ p.lead {
   justify-content: center;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #7c3aed;
+  background-color: #0F766E;
   color: #fff;
   border-radius: 100%;
   font-size: 1.5rem;
@@ -10938,7 +10938,7 @@ p.lead {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #5b21b6;
+  background-color: #065f57;
 }
 
 .dev-icons {
@@ -10978,8 +10978,8 @@ section.resume-section .resume-section-content {
 }
 .tab-btn {
     background: transparent;
-    border: 1px solid #7c3aed;
-    color: #7c3aed;
+    border: 1px solid #0F766E;
+    color: #0F766E;
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
     cursor: pointer;
@@ -10987,7 +10987,7 @@ section.resume-section .resume-section-content {
     transition: all 0.2s;
 }
 .tab-btn:hover, .tab-btn.active {
-    background: #7c3aed;
+    background: #0F766E;
     color: #fff;
 }
 .project-img-wrapper {
@@ -11007,8 +11007,13 @@ section.resume-section .resume-section-content {
 }
 
 .custom-sidebar {
-    background: linear-gradient(160deg, #2e0a6e 0%, #1a0533 40%, #0a0a0a 100%) !important;
+    background: linear-gradient(160deg, #0F766E 0%, #065f57 40%, #2B2620 100%) !important;
 }
 .custom-accent {
-    color: #7c3aed !important;
+    color: #0F766E !important;
+}
+
+body {
+    background-color: #F7F3EA !important;
+    color: #2B2620 !important;
 }
