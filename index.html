@@ -46,7 +46,7 @@
                         AI Engineer &nbsp;|&nbsp; MSc in Computer Engineering (IT) &nbsp;|&nbsp; Creator of <a href="https://fersmith.ai/?utm_source=portfolio&utm_medium=referral&utm_campaign=portfolio_link" target="_blank" style="color:inherit;">FersmithAI</a>
                     </div>
                     <div class="mb-4" style="color:#6c757d; font-size:0.95rem;">Istanbul, Turkey</div>
-                    <p class="lead mb-5">AI Engineer and SaaS Founder focused on building practical, data-driven software solutions. Holding an MSc in Information Technologies with a focus on AI applications, I leverage my background in NLP and transformer models to create real-world impact. Currently engineering FersmithAI as a solo founder — an innovative learning ecosystem designed to accelerate technical career growth.</p>
+                    <p class="lead mb-5">AI Engineer and solo SaaS founder. I build software that ships, mostly around NLP and transformer models, with an MSc in Information Technologies behind it. Right now I run FersmithAI, a learning platform for people moving into AI/ML roles. It's live, and subscriptions are open.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/sinem-demirci-005481208/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/SinemCiftciDemirci" target="_blank"><i class="fab fa-github"></i></a>
@@ -65,7 +65,7 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">AI Engineer</h3>
                             <div class="subheading mb-3">FersmithAI</div>
-                            <p>Architecting FersmithAI, an innovative learning ecosystem that transforms dense technical engineering resources into personalized, adaptive audio-learning experiences and smart summaries. Engineered SkyAnalyst-AI, a modular cabin operations intelligence framework powered by RAG, ChromaDB vector storage, and DistilBART-CNN to convert unstructured flight logs into structured insights with 4x faster inference. Developed Children’s Tale Summarizer, a complete NLP pipeline and Flask application that benchmarks 15+ transformer models (optimizing ROUGE-L from 0.25 to 0.52) for segmenting Turkish stories and generating AI illustrations via Stable Diffusion.</p>
+                            <p>Built and launched FersmithAI solo, from the first commit to paid subscriptions: a subscription learning platform that turns dense technical material into daily study plans, with 28 skills, 93 audio episodes from a self-built TTS pipeline, 13 hands-on labs, 803 flashcards, and a 140-question assessment engine, running on Next.js 16, Supabase, and Paddle. Engineered SkyAnalyst-AI, a modular cabin operations intelligence framework powered by RAG, ChromaDB vector storage, and DistilBART-CNN to convert unstructured flight logs into structured insights with 4x faster inference. Developed Children’s Tale Summarizer, a complete NLP pipeline and Flask application that benchmarks 15+ transformer models (optimizing ROUGE-L from 0.25 to 0.52) for segmenting Turkish stories and generating AI illustrations via Stable Diffusion.</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">October 2024 - Present</span></div>
                     </div>
@@ -89,7 +89,7 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Translator</h3>
                             <div class="subheading mb-3">Freelance</div>
-                            <p>Translated academic and creative texts (EN<->TR) with precision and deadline discipline. Built a strong foundation in text quality, structure, and linguistic nuance — essential in NLP.</p>
+                            <p>Translated academic and creative texts (EN<->TR) with precision and deadline discipline. Built a strong foundation in text quality, structure, and linguistic nuance, the same instincts NLP work runs on.</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">September 2014 - December 2019</span></div>
                     </div>
@@ -173,8 +173,14 @@
 
                     <!-- FersmithAI Project -->
                     <div class="project mb-5">
-                        <p><strong>FersmithAI: Personalized AI/ML Learning Platform</strong> <span class="badge bg-success" style="font-size:0.7rem;">In Progress</span><br>
-                        A full-stack SaaS platform delivering personalized AI/ML learning roadmaps for technical professionals. Built solo with Next.js 14, Supabase (PostgreSQL + Auth), and Tailwind CSS. Features a 140-question adaptive assessment engine, dynamic skill graph with real-time progress tracking, and Google OAuth. Currently live as a waitlist — subscription model coming soon.
+                        <p><strong>FersmithAI: Personalized AI/ML Learning Platform</strong> <span class="badge bg-success" style="font-size:0.7rem;">Live</span><br>
+                        A subscription learning platform for people who hold a full-time job and have 1-2 hours a day to move into AI/ML. Every morning it asks two questions, how many minutes you have and what you're working toward, then builds that day's plan to fit the answer.
+                        </p>
+                        <p>
+                        The library covers 28 skills across 7 categories, each with 3 podcast episodes (~20 min), a video, a worked code example, 20 flashcards, and 20 interview questions. Around that sit 13 hands-on labs (Docker, Git, MLflow, LangGraph, kubectl), an 87-card glossary, and 9 paper breakdowns. 803 flashcards and 690 interview questions in total, with all 93 audio episodes produced through my own TTS pipeline. An optional 140-question assessment scores you skill by skill and reorders your queue, and it never locks content away.
+                        </p>
+                        <p>
+                        Most people stitch this together from three separate subscriptions: one for courses, one for practice, one for interview prep. Here it's one, and all of it is AI/ML. Built solo on Next.js 16, React 19, TypeScript, Tailwind CSS 4, Supabase (Postgres, Auth, Storage), Paddle for billing, and Vercel for hosting.
                         </p>
                         <div class="project-tabs mb-2" data-project="fersmith">
                             <button class="tab-btn active" data-tab="1">Screen 1</button>
@@ -198,7 +204,7 @@
                     <!-- SkyAnalyst-AI Project -->
                     <div class="project mb-5">
                         <p><strong>SkyAnalyst-AI: Cabin Operations Intelligence Framework</strong><br>
-                        A modular NLP framework that transforms unstructured flight cabin reports into structured operational insights using RAG and abstractive summarization. Built on ChromaDB vector storage and all-MiniLM-L6-v2 embeddings for semantic retrieval across 2,500+ synthetic incident reports — enabling meaning-based search that goes beyond keyword matching. Summarization is powered by DistilBART-CNN, delivering 4x faster inference than standard BART with negligible quality loss. Includes an exploratory analytics dashboard with sentiment intensity scoring and statistical visualizations across 5 incident categories and 22 flight routes.
+                        A modular NLP framework that transforms unstructured flight cabin reports into structured operational insights using RAG and abstractive summarization. Built on ChromaDB vector storage and all-MiniLM-L6-v2 embeddings for semantic retrieval across 2,500+ synthetic incident reports, so search runs on meaning instead of keywords. Summarization is powered by DistilBART-CNN, delivering 4x faster inference than standard BART with negligible quality loss. Includes an exploratory analytics dashboard with sentiment intensity scoring and statistical visualizations across 5 incident categories and 22 flight routes.
                         </p>
                         <div class="project-tabs mb-2" data-project="skyanalyst">
                             <button class="tab-btn active" data-tab="1">Screen 1</button>

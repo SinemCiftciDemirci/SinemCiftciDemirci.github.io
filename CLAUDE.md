@@ -104,6 +104,6 @@ origin → https://github.com/SinemCiftciDemirci/SinemCiftciDemirci.github.io.gi
 
 | Project | Status | GitHub | Live |
 |---------|--------|--------|------|
-| FersmithAI | In Progress | public | fersmith.ai |
+| FersmithAI | Live (paid subscriptions open) | public | fersmith.ai |
 | SkyAnalyst-AI | Completed | public | — |
 | Children's Tale Summarizer | Completed | public | — |
