@@ -69,11 +69,19 @@ JS lives at end of `index.html` body (not in `scripts.js`) using `DOMContentLoad
 
 ## fersmith.ai links
 
-All 3 links on the page use UTM parameters:
-```
-https://fersmith.ai/?utm_source=portfolio&utm_medium=referral&utm_campaign=portfolio_link
-```
-Locations: hero subheading, globe social icon, "Visit fersmith.ai" button in Projects section.
+Three links point at fersmith.ai: the hero subheading, the globe social icon,
+and the "Visit fersmith.ai" button in the Projects section.
+
+**The URLs are not written here.** Every UTM link Sinem uses lives in one
+file, and copying one into a second place is how the two drift apart:
+
+    C:\Users\Axel\Desktop\FersmithAI\UTM_Linkleri.md   ->  "Dis" section
+
+What changed on 2026-09-08: all three links carried the same
+`utm_campaign=portfolio_link`, so analytics could show that the portfolio
+sent traffic but never which of the three slots sent it. They are now
+`portfolio_hero`, `portfolio_icon` and `portfolio_button`. The HTML still
+carries the old value; update it from the file above.
 
 ## Deploy workflow
 
