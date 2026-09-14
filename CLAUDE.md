@@ -80,8 +80,13 @@ file, and copying one into a second place is how the two drift apart:
 What changed on 2026-09-08: all three links carried the same
 `utm_campaign=portfolio_link`, so analytics could show that the portfolio
 sent traffic but never which of the three slots sent it. They are now
-`portfolio_hero`, `portfolio_icon` and `portfolio_button`. The HTML still
-carries the old value; update it from the file above.
+`portfolio_hero`, `portfolio_icon` and `portfolio_button`, and the HTML carries
+the new values.
+
+Product numbers in the copy (skills, labs, flashcards, interview questions)
+come from the live Supabase tables, not from memory. Last checked 2026-09-14:
+28 skills, 16 labs, 125 glossary cards, 902 flashcards, 720 interview
+questions, 9 papers, 93 audio episodes, 140 assessment questions.
 
 ## Deploy workflow
 
@@ -101,7 +106,7 @@ origin → https://github.com/SinemCiftciDemirci/SinemCiftciDemirci.github.io.gi
 
 ## Sections (in order)
 
-1. **About** — headline, bio, social icons (LinkedIn, GitHub, email, globe→fersmith.ai)
+1. **About** — headline, bio, social icons (LinkedIn, YouTube, Instagram @sinem.fersmithai, GitHub, email, globe→fersmith.ai)
 2. **Experience** — FersmithAI (AI Engineer, solo founder), Uptrail (Data Analyst intern)
 3. **Education** — MSc + BSc
 4. **Skills** — Programming Languages / Libraries & AI Frameworks / AI-Assisted Workflow & Tools
