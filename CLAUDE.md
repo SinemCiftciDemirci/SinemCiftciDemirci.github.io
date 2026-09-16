@@ -120,3 +120,11 @@ origin → https://github.com/SinemCiftciDemirci/SinemCiftciDemirci.github.io.gi
 | FersmithAI | Live (paid subscriptions open) | public | fersmith.ai |
 | SkyAnalyst-AI | Completed | public | — |
 | Children's Tale Summarizer | Completed | public | — |
+
+## Analytics
+
+GoatCounter, cookie-free: https://sinemdemirci.goatcounter.com (account is Sinem's).
+Script sits at the end of `index.html`. Outbound links carry
+`data-goatcounter-click="out-..."`, so the dashboard lists clicks per link
+(`out-fersmith-hero`, `out-fersmith-icon`, `out-fersmith-button` match the three UTM slots).
+Sinem's own browser: open the site once with `?notrack` (sets localStorage `skipgc`), `?track` undoes it.
