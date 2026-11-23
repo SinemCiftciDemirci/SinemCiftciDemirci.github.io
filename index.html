@@ -25,6 +25,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/product-stage.css?v=11" rel="stylesheet" />
+        <link href="css/skill-sphere.css?v=2" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -48,8 +50,11 @@
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
+            <!-- The intro beside FersmithAI's real screens, floating in depth (css/product-stage.css,
+                 js/product-stage.js). The stage only shows; the button is the way to fersmith.ai. -->
+            <section class="resume-section product-hero" id="about">
+                <div class="resume-section-content hero-grid">
+                    <div class="about-text">
                     <h1 class="mb-0">
                         Sinem <span class="custom-accent">Demirci</span>
                     </h1>
@@ -57,7 +62,12 @@
                         AI Engineer &nbsp;|&nbsp; MSc in Computer Engineering (IT) &nbsp;|&nbsp; Creator of <a href="https://fersmith.ai/?utm_source=portfolio&utm_medium=referral&utm_campaign=portfolio_hero" data-goatcounter-click="out-fersmith-hero" target="_blank" style="color:inherit;">FersmithAI</a>
                     </div>
                     <div class="mb-4" style="color:#6c757d; font-size:0.95rem;">Istanbul, Turkey</div>
-                    <p class="lead mb-5">AI Engineer and solo SaaS founder. I build software that ships, mostly around NLP and transformer models, with an MSc in Information Technologies behind it. Right now I run FersmithAI, a learning platform for people moving into AI/ML roles. It's live, and subscriptions are open.</p>
+                    <p class="hero-hook">I built FersmithAI on my own. The first full version took 40 days, and it's now a live AI/ML learning platform with subscriptions open.</p>
+                    <p class="lead mb-5">I'm an AI engineer with an MSc in computer engineering. Before FersmithAI my work was mostly NLP: for my thesis I tested 15+ transformer models on Turkish summarization and doubled ROUGE-L.</p>
+                    <p class="hero-cta">
+                        <a class="btn-hero" href="https://fersmith.ai/?utm_source=portfolio&utm_medium=referral&utm_campaign=portfolio_hero" data-goatcounter-click="out-fersmith-hero-button" target="_blank" rel="noopener">Visit fersmith.ai <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        <a class="btn-hero btn-hero-ghost" href="assets/cv/Sinem_Demirci_CV.pdf" download="Sinem_Demirci_CV.pdf" data-goatcounter-click="cv-download">Download CV <i class="fas fa-download" aria-hidden="true"></i></a>
+                    </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/sinem-demirci-005481208/" target="_blank" rel="noopener" data-goatcounter-click="out-linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://www.youtube.com/@FersmithAI" target="_blank" rel="noopener" data-goatcounter-click="out-youtube" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -66,7 +76,64 @@
                         <a class="social-icon" href="mailto:sinemciftcidemirci@gmail.com" data-goatcounter-click="out-email" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
                         <a class="social-icon" href="https://fersmith.ai/?utm_source=portfolio&utm_medium=referral&utm_campaign=portfolio_icon" target="_blank" rel="noopener" data-goatcounter-click="out-fersmith-icon" aria-label="FersmithAI" title="FersmithAI"><i class="fas fa-globe"></i></a>
                     </div>
-
+                    </div>
+                    <div class="stage" data-stage aria-hidden="true">
+                        <div class="stage-floor" aria-hidden="true"></div>
+                        <div class="stage-rig" aria-hidden="true">
+                            <!-- Rebuilt pieces of the real app; every string is copied from it
+                                 (DailyCheckIn, the dashboard, the LLM Fundamentals module). -->
+                            <div class="pane pane-main">
+                                <div class="pane-bar"><i></i><i></i><i></i><span>fersmith.ai</span></div>
+                                <div class="pane-screen ui" data-ui-main>
+                                    <div class="ui-checkin">
+                                        <span class="ui-eyebrow">Today's plan</span>
+                                        <div class="ui-title">How much time do you have today?</div>
+                                        <div class="ui-sub">This can change every day. Pick what's realistic for right now.</div>
+                                        <div class="ui-options">
+                                            <div class="ui-opt"><b>5 minutes</b><small>A quick glossary review or two.</small></div>
+                                            <div class="ui-opt"><b>15 minutes</b><small>One piece at a time.</small></div>
+                                            <div class="ui-opt ui-opt-pick"><b>30 minutes</b><small>A full episode plus the video.</small><em></em></div>
+                                            <div class="ui-opt"><b>1 hour+</b><small>Most of a skill in one sitting.</small></div>
+                                        </div>
+                                        <div class="ui-btn"><span class="ui-btn-a">Start today's plan</span><span class="ui-btn-b">Building your plan...</span></div>
+                                    </div>
+                                    <div class="ui-plan">
+                                        <div class="ui-plan-head">
+                                            <div class="ui-title">Today's plan</div>
+                                            <div class="ui-meta"><span class="ui-done">0</span>/2 done · ~30 min</div>
+                                        </div>
+                                        <div class="ui-meter"><span></span></div>
+                                        <div class="ui-skill">LLM Fundamentals &amp; Prompt Engineering</div>
+                                        <div class="ui-task ui-task-1"><span class="ui-tick"></span><div><b>Episode 1: Theory → Reality</b><small>Listen to the foundational concepts episode.</small></div><span class="ui-min">20m</span></div>
+                                        <div class="ui-task ui-task-2"><span class="ui-tick"></span><div><b>Video Summary</b><small>Watch the visual walkthrough.</small></div><span class="ui-min">10m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pane pane-audio ui">
+                                <div class="ui-card-head"><span class="ui-ico"><i class="fas fa-headphones"></i></span><div><b>Audio series</b><small>3 episodes · ~20 minutes each</small></div></div>
+                                <div class="ui-ep">Episode 1 · Theory → Reality</div>
+                                <div class="ui-player"><span class="ui-play"><i class="fas fa-pause"></i></span><span class="ui-wave" data-ui-wave></span><span class="ui-time" data-ui-time>0:13</span></div>
+                                <div class="ui-transcript"><div class="ui-lines">
+                                    <p>Imagine you hire a world-class critically acclaimed actor to sit at your front desk, you know, just to answer the phone.</p>
+                                    <p>Right, a real top-tier professional.</p>
+                                    <p>Exactly.</p>
+                                    <p>And a customer calls, asks a really simple, straightforward question, something like, what are your business hours?</p>
+                                </div></div>
+                            </div>
+                            <div class="pane pane-flash ui">
+                                <div class="ui-card-head"><span class="ui-ico"><i class="fas fa-layer-group"></i></span><div><b>Flashcards</b><small>20 terms · Review or test yourself</small></div></div>
+                                <div class="ui-count">1 / 20</div>
+                                <div class="ui-flip"><div class="ui-flip-in">
+                                    <div class="ui-face ui-front">Large Language Model (LLM)</div>
+                                    <div class="ui-face ui-back">A Transformer-based model trained on vast amounts of text to predict the next token, resulting in broad language understanding and generation capabilities.</div>
+                                </div></div>
+                            </div>
+                            <div class="pane pane-code ui">
+                                <div class="ui-code-head"><b>In Practice</b><span>python</span></div>
+                                <pre class="ui-code" data-ui-code></pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -78,9 +145,9 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">AI Engineer</h3>
                             <div class="subheading mb-3">FersmithAI</div>
-                            <p>Built and launched FersmithAI solo, from the first commit to paid subscriptions. It's a learning platform that turns dense technical material into daily study plans for people moving into AI/ML while working full time: 28 skills, 93 audio episodes from my own TTS pipeline, 16 hands-on labs, 902 flashcards, 720 interview questions and a 140-question assessment. It runs on Next.js 16, Supabase and Paddle.</p>
+                            <p>Built and launched FersmithAI solo, from the first commit to a live product with Paddle billing. It's a learning platform that turns dense technical material into daily study plans for people moving into AI/ML while working full time. It runs on Next.js 16, Supabase and Paddle.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">October 2024 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">June 2026 - Present</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -149,8 +216,12 @@
                     <span class="eyebrow">What I build with</span>
                     <h2 class="mb-4">Skills</h2>
 
-                    <p class="skills-intro">I work as an AI-assisted engineer: I design the system, split it into steps, and review and test what gets built. Claude Code, Codex and GitHub Copilot write much of the code, and I check it. Everything below is something I've used in my own projects.</p>
+                    <p class="skills-intro">I design the system, split it into steps, and review and test what gets built. Everything below is something I've used in my own projects.</p>
 
+                    <!-- Wide screens: the same skills as a turning sphere, built from the lists
+                         below by js/skill-sphere.js. Phones keep the lists. -->
+                    <div class="skill-sphere" aria-hidden="true"></div>
+                    <div class="skill-list">
                     <div class="skill-group">
                         <div class="subheading mb-2">Languages</div>
                         <ul class="skill-chips">
@@ -166,9 +237,10 @@
                             <li>NLP</li>
                             <li>LLM applications <small>Claude, OpenAI APIs</small></li>
                             <li>RAG and vector search</li>
-                            <li>Fine-tuning and evaluating transformer models</li>
+                            <li>Benchmarking and evaluating transformer models</li>
                             <li>Speech-to-text and text-to-speech</li>
                             <li>Image generation</li>
+                            <li>AI-assisted development <small>Claude Code, Codex, GitHub Copilot</small></li>
                         </ul>
                     </div>
 
@@ -203,6 +275,7 @@
                             <li>Git &amp; GitHub</li>
                         </ul>
                     </div>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -214,10 +287,13 @@
                     <!-- FersmithAI Project -->
                     <div class="project mb-5">
                         <p><strong>FersmithAI: Personalized AI/ML Learning Platform</strong> <span class="badge bg-success" style="font-size:0.7rem;">Live</span><br>
-                        A subscription learning platform for people who hold a full-time job and have 1-2 hours a day to move into AI/ML. Every morning it asks two questions, how many minutes you have and what you're working toward, then builds that day's plan to fit the answer.
+                        A learning platform for people who hold a full-time job and have 1-2 hours a day to move into AI/ML. Every morning it asks two questions, how many minutes you have and what you're working toward, then builds that day's plan to fit the answer.
                         </p>
                         <p>
-                        The library covers 28 skills across 7 categories, each with 3 podcast episodes (~20 min), a video, a worked code example, 20 flashcards, and 20 interview questions. Around that sit 16 hands-on labs (Docker, Git, MLflow, LangGraph, kubectl and more), a 125-card glossary, and 9 paper breakdowns. 902 flashcards and 720 interview questions in total, with all 93 audio episodes produced through my own TTS pipeline. An optional 140-question assessment scores you skill by skill and reorders your queue, and it never locks content away.
+                        Every skill comes with a podcast series (theory, real failures, interview prep), a video summary, a code example, a case study, flashcards and interview questions. The hands-on labs cover tools like Docker, Git, MLflow and LangGraph, each with its own case study, and there's a glossary and a set of paper breakdowns on top.
+                        </p>
+                        <p>
+                        I built the media pipeline behind it in Python. It turns each draft episode into a transcript, labels the two speakers with Whisper and renders the final audio with Gemini TTS. Videos are assembled from slides and voice, with Whisper subtitles generated on a local GPU. The assessment scores each skill and reorders the learner's queue, so the daily plan starts with what they need most.
                         </p>
                         <p>
                         Most people stitch this together from three separate subscriptions: one for courses, one for practice, one for interview prep. Here it's one, and all of it is AI/ML. Built solo on Next.js 16, React 19, TypeScript, Tailwind CSS 4, Supabase (Postgres, Auth, Storage), Paddle for billing, and Vercel for hosting.
@@ -227,14 +303,16 @@
                             <button class="tab-btn" data-tab="2">Skill map</button>
                             <button class="tab-btn" data-tab="3">Podcasts</button>
                             <button class="tab-btn" data-tab="4">Practice</button>
+                            <button class="tab-btn" data-tab="6">Case study</button>
                             <button class="tab-btn" data-tab="5">Free skill</button>
                         </div>
                         <div class="project-img-wrapper">
-                            <img id="fersmith-1" src="assets/img/fersmithai/1.png" class="project-tab-img active" alt="FersmithAI home page: how much time can you give your future self today?">
+                            <img id="fersmith-1" src="assets/img/fersmithai/home.webp" class="project-tab-img active" alt="FersmithAI home page: learn AI/ML in the right order, in the time you have today">
                             <img id="fersmith-2" src="assets/img/fersmithai/2.png" class="project-tab-img" alt="FersmithAI skill map with lessons grouped by category">
                             <img id="fersmith-3" src="assets/img/fersmithai/3.png" class="project-tab-img" alt="FersmithAI podcast episodes with transcripts and recaps">
                             <img id="fersmith-4" src="assets/img/fersmithai/4.png" class="project-tab-img" alt="FersmithAI flashcards and interview questions">
                             <img id="fersmith-5" src="assets/img/fersmithai/5.png" class="project-tab-img" alt="FersmithAI free AI Agents skill page in dark mode">
+                            <img id="fersmith-6" src="assets/img/fersmithai/case.webp?v=2" class="project-tab-img" alt="FersmithAI case study: build a support agent for Lodos Air">
                         </div>
                         <p class="mt-3">
                             <a class="btn btn-outline-primary btn-sm" href="https://fersmith.ai/?utm_source=portfolio&utm_medium=referral&utm_campaign=portfolio_button" data-goatcounter-click="out-fersmith-button" target="_blank">Visit fersmith.ai</a>
@@ -267,7 +345,7 @@
                         At the time, Turkish had very few language models trained on creative writing, and the available ones (T5, BERT, GPT variants) pulled sentences out of a text instead of writing a real summary. For my master’s thesis I built an end-to-end pipeline that writes abstractive summaries of Turkish children’s tales and illustrates them.
                         </p>
                         <p>
-                        I tested more than 15 transformer models on 13 tales, then fine-tuned the top three with detailed hyperparameter optimization. That reached up to 2× ROUGE-L (0.25 to 0.52) and +3 points of BERTScore F1.
+                        I tested more than 15 transformer models on 13 tales, then tuned the generation settings of the top three (temperature, beam search, length limits, repetition penalty). That reached up to 2× ROUGE-L (0.25 to 0.52) and +3 points of BERTScore F1.
                         </p>
                         <p>
                         The Flask app takes a PDF or TXT file, summarizes the tale in three parts (introduction, development, conclusion), translates the summary into English and draws an illustration for each part with Stable Diffusion. Authors can get original illustrations for a book without drawing them, and 90% of users found the visuals matched the story.
@@ -328,6 +406,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/product-stage.js?v=3"></script>
+        <script src="js/skill-sphere.js?v=2"></script>
         <!-- GoatCounter analytics. Open the site once with ?notrack to stop counting this browser, ?track to undo.-->
         <script>
             try {

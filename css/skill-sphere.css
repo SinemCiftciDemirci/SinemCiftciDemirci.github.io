@@ -1,0 +1,85 @@
+/* Skills as a turning word globe (js/skill-sphere.js): the skills sit on a
+   wireframe sphere as small pills. Wide screens only; below 992px the lists
+   stay as they are and the globe is not shown. */
+
+.skill-sphere { display: none; }
+
+@media (min-width: 992px) {
+    .skill-sphere {
+        position: relative;
+        display: block;
+        height: 34rem;
+        margin: .5rem 0 0;
+        cursor: grab;
+        touch-action: none;
+        user-select: none;
+    }
+    .skill-sphere:active { cursor: grabbing; }
+    .skill-sphere canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    /* The lists stay in the page for screen readers and search, out of sight */
+    .has-sphere .skill-list {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+}
+
+.ss-pill {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .38rem .8rem .38rem .6rem;
+    border: 1px solid var(--c-line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .92);
+    color: var(--fs-ink, #17201e);
+    font-size: .86rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 6px 18px -8px rgba(15, 23, 42, .25);
+    will-change: transform, opacity;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.ss-pill i { flex: none; width: .5rem; height: .5rem; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 3px var(--c-soft); }
+.ss-pill small { color: var(--fs-muted, #64706d); font-size: .74rem; font-weight: 500; }
+.ss-pill.is-lifted { background: var(--c); border-color: var(--c); color: #fff; box-shadow: 0 14px 30px -12px var(--c); }
+.ss-pill.is-lifted i { background: #fff; box-shadow: none; }
+.ss-pill.is-lifted small { color: rgba(255, 255, 255, .85); }
+
+/* Legend: also a filter. Hovering or tapping a group lights up its skills. */
+.ss-legend {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin: .75rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+.ss-legend button {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .35rem .8rem;
+    border: 1px solid var(--fs-border, rgba(15, 118, 110, .14));
+    border-radius: 999px;
+    background: #fff;
+    color: #475569;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.ss-legend button i { width: .5rem; height: .5rem; border-radius: 50%; background: var(--c); }
+.ss-legend button:hover, .ss-legend button[aria-pressed="true"] { border-color: var(--c); color: var(--fs-ink, #17201e); background: var(--c-soft); }
+@media (min-width: 992px) {
+    .has-sphere .ss-legend { display: flex; }
+}

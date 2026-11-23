@@ -69,8 +69,11 @@ JS lives at end of `index.html` body (not in `scripts.js`) using `DOMContentLoad
 
 ## fersmith.ai links
 
-Three links point at fersmith.ai: the hero subheading, the globe social icon,
-and the "Visit fersmith.ai" button in the Projects section.
+Four links point at fersmith.ai: the hero subheading, the "Visit fersmith.ai"
+button in the hero, the globe social icon, and the "Visit fersmith.ai" button in
+the Projects section. The hero button reuses `utm_campaign=portfolio_hero`;
+GoatCounter tells the two apart (`out-fersmith-hero` vs
+`out-fersmith-hero-button`).
 
 **The URLs are not written here.** Every UTM link Sinem uses lives in one
 file, and copying one into a second place is how the two drift apart:
@@ -87,6 +90,23 @@ Product numbers in the copy (skills, labs, flashcards, interview questions)
 come from the live Supabase tables, not from memory. Last checked 2026-09-14:
 28 skills, 16 labs, 125 glossary cards, 902 flashcards, 720 interview
 questions, 9 papers, 93 audio episodes, 140 assessment questions.
+
+## First screen, Skills globe and CV (2026-11-23)
+
+- **Hero stage** (`css/product-stage.css`, `js/product-stage.js`): rebuilt
+  pieces of the FersmithAI app (check-in, today's plan, podcast, flashcard,
+  code) floating in 3D beside the intro. Every string in it is copied from the
+  app. It is not a link on purpose: the hero button is the way to fersmith.ai.
+- **Skills globe** (`css/skill-sphere.css`, `js/skill-sphere.js`): built from
+  the `.skill-list` markup, so edit the lists and the globe follows. Wide
+  screens only; phones see the lists.
+- **CV** (`assets/cv/Sinem_Demirci_CV.pdf`): the phone-free copy of the CV.
+  The editable source is `Desktop/Sinem belgeler/CV/Sinem_Demirci_CV_EN_2026-11.docx`;
+  regenerate this copy whenever it changes and remove the phone number again.
+- The thesis tuned generation settings; it did not fine-tune models. Never
+  write "fine-tuning" about it.
+- Not deployed, kept locally from earlier experiments: `css/window-seat.css`,
+  `js/window-seat.js`, `assets/video/`, `assets/img/sky/`, `assets/img/stage/`.
 
 ## Deploy workflow
 
